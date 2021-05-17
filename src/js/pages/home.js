@@ -1,15 +1,15 @@
 import View from './view';
-
-const template = `
-    <h2>home</h2>
-    <p>is home</p>
-    <a href="/tv">드라마로 이동</a>
-`;
-
+import Html from '../../views/home.html';
+// const template = `
+//     <h2>home</h2>
+//     <p>is home</p>
+//     <a href="/tv">드라마로 이동</a>
+// `;
+// console.log(template);
 class Home extends View {
     constructor (){
         super({
-            innerHTML : template,
+            innerHTML : Html,
             className : 'home'
         })
         // console.log(this.$element);
