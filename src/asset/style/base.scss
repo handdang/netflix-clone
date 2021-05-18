@@ -1,0 +1,29 @@
+*{margin:0; padding:0; letter-spacing:-.4px;}
+*, *:after, *:before {box-sizing:border-box;}
+html{
+    overflow-y: scroll;
+}
+body{
+    min-width: 280px;
+    background: #141414;
+    color: #fff;
+    line-height: 1.2;
+}
+img{
+    max-width: 100%;
+    vertical-align: top;
+    object-fit: cover;
+    pointer-events: none;
+}
+li{list-style:none;}
+a{cursor:pointer; background-color:transparent; text-decoration:none; color:inherit;}
+button, input, optgroup, select, textarea{font-family:inherit; font-size:100%; line-height:1.15; margin:0;}
+button, input{overflow:visible;}
+input{-webkit-appearance:none; -webkit-border-radius:0;}
+button:focus,select:focus,input:focus{outline:none;}
+button, select{text-transform:none;}
+[type=button], [type=reset], [type=submit], button{cursor:pointer; border:0; background-color:transparent; -webkit-appearance:button; outline:0;}
+[type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button::-moz-focus-inner{border-style:none; padding:0;}
+[type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring, button:-moz-focusring{outline:1px dotted solid;}
+[type=text]::-ms-clear, [type=number]::-ms-clear, [type=email]::-ms-clear{display:none;}
+h1, h2, h3, h4, h5, h6 {font-size: 100%;}

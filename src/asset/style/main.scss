@@ -1,0 +1,44 @@
+@import './normailze.scss';
+@import './base.scss';
+@import './util.scss';
+@import './common.scss';
+header{
+    .nav-links{
+        display: flex;
+        padding: 16px 48px 8px;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, .7) 10%, rgba(0, 0, 0, 0));
+        ul{
+            display: flex;align-items: center;
+             &.main {
+                 margin-right: auto;
+                 align-items: center;
+             }
+            li{
+                margin-right: 24px;
+                color: #e5e5e5;
+                font-size: 14px;
+                cursor: pointer;
+                a{display: block;}
+                &.logo {
+                    display: block;
+                    max-width: 92px;
+                    margin-right: 40px;
+                }
+                &.active {
+                    color: #fff;
+                    font-weight: 700;
+                }
+                &:last-child {
+                    margin-right: 0px;
+                }
+                &.profile{
+                    max-width: 38px;
+                    max-height: 38px;
+                    display: block;
+                    border-radius: 4px;
+                    overflow: hidden;
+                }
+            }            
+        }
+    }
+}

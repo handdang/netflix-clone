@@ -1,0 +1,50 @@
+.home{
+    .home-header{
+        position: relative;
+        max-height: 920px;
+        overflow: hidden;
+        .video{
+            position: relative;
+            padding-top: 57%;
+            width: 100%;
+            video {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .metadata{
+            position: absolute;
+            top: 45%;
+            width: 50%;
+            left: 48px;
+            .episode-info{margin-bottom:24px;
+                .episode-title{
+                    font-size: 2.6vw;
+                    font-weight: 700;
+                    margin-bottom:12px;
+                    text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+                }
+                .episode-desc{
+                    font-weight: 400;
+                    line-height: normal;
+                    width: 100%;
+                    font-size: 1.4vw;
+                    text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+                    margin-top: .1vw;
+                }
+            }
+            .episode-play{
+                display: flex; 
+                .whiteBg{margin-right: 12px;}
+            }
+        }
+    }
+    .content{
+        padding: 48px;
+        margin-top: -150px;
+        position: relative;
+    }
+}

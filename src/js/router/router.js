@@ -84,13 +84,11 @@ class Router extends EventEmitter{
     }
     go(path){
         const route = this._getRoute(path)
-
         if(route){
             this._pushState(route);
             this._render(route);
         }
     }
-    
 }
 
 export default Router;

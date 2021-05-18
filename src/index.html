@@ -9,14 +9,51 @@
     <header>
         <h2 class="sr-only">main menu</h2>
         <nav class="nav-links">
-            <a href="/">홈</a>
-            <a href="/tv">tv</a>
-            <a href="/movie">movie</a>
+            <ul class="main">
+                <li class="logo">
+                    <a href="/" >
+                        <img src="asset/images/common/logo.png">
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="/">홈</a>
+                </li>
+                <li>
+                    <a href="/tv">TV 프로그램</a>
+                </li>
+                <li>
+                    <a href="/movie">영화</a>
+                </li>
+                
+            </ul>
+            <ul class="sub">
+                <li>
+                    <a href="/" alt="검색">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="/" alt="선물하기">
+                        <ion-icon name="gift-outline"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="/tv" alt="알림">
+                        <ion-icon name="notifications-outline"></ion-icon>
+                    </a>
+                </li>
+                <li class="profile">
+                    <a href="/tv" alt="알림">
+                        <img src="asset/images/common/profile.jpeg">
+                    </a>
+                </li>
+            </ul>
         </nav>
     </header>
     <div id="container" class="container">
 
     </div>
     <script src="./js/app.js"></script> 
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>
