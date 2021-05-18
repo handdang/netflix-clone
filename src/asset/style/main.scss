@@ -3,10 +3,14 @@
 @import './util.scss';
 @import './common.scss';
 header{
+    padding: 16px 48px 8px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .7) 10%, rgba(0, 0, 0, 0));
+    position: fixed;
+    width:100%;
+    z-index: 10;
     .nav-links{
         display: flex;
-        padding: 16px 48px 8px;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, .7) 10%, rgba(0, 0, 0, 0));
+        
         ul{
             display: flex;align-items: center;
              &.main {
