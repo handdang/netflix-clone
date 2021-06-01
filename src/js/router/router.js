@@ -4,7 +4,7 @@ import {
 
 }from '../helper/utils';
 
-class Router extends EventEmitter{
+class Router extends EventEmitter {
     constructor({ entry , routes, initialRoute}){
         super();
         //인스턴스 만들기
@@ -60,6 +60,8 @@ class Router extends EventEmitter{
         if(isFunction(component.mounted)){
             setTimeout(() => component.mounted(), 1)
         }
+
+        this.emit('update')
 
         this._previousComponent = component;
     }

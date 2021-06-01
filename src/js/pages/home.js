@@ -1,8 +1,11 @@
 import View from './view';
 import Html from '../../views/home.html';
+import Swiper from '../lib/swiper.js';
+import {
+    IMAGE_BASE_URL,
+    tmdb
+} from '../api'
 
-// QUES : 이거 공통으로 쓰고싶은데
-const IMAGE_BASE_URL = 'http://image.tmdb.org/t/p/';
 class Home extends View {
     constructor (){
         super({
@@ -16,6 +19,7 @@ class Home extends View {
     }
 
     mounted() {
+        // this._getMovePopular();
         console.log('mounted')
     }
 
@@ -23,25 +27,46 @@ class Home extends View {
         console.log('destroyed')   
     }
 }
-
+// _getMovePopular() {
+//     tmdb.getMovePopular().then((res) => {
+//         this._render(res.results)
+//     })
+// }
+// _render(results){
+//     console.log(results)
+// }
 function getData(){
     let list = '';
-    fetch('https://api.themoviedb.org/3/movie/popular?api_key=414ac1c796f172eb60eef17ee4a37c73')
-    .then(res => res.json())
-    .then(res => {
+    tmdb.getMovePopular()
+    .then((res) => {
         if (res.results) {
             let data = res.results;
             data.forEach((element) => {
-                  list += `<li class="element">
-                            <div class="thumbnail">
-                                <div class="thumbnail-inner">
-                                    <img src="${IMAGE_BASE_URL+"w500"+element.backdrop_path}">
-                                </div>
-                            </div>
-                        </li>`
+                list +=  `<li class="element">
+                    <div class="thumbnail">
+                        <div class="thumbnail-inner">
+                            <img src="${IMAGE_BASE_URL+"w500"+element.backdrop_path}">
+                        </div>
+                    </div>
+                </li>`
             });
-            document.querySelector('.list-ui').innerHTML = list;
+            document.querySelector('.nowWatch').innerHTML = list;
         }
-    });
+        setTimeout(()=>{
+            const swiper = new Swiper(document.querySelector('.nowWatch') , {
+                navigation : {
+                    prevEl : document.querySelector('.prev'),
+                    nextEl : document.querySelector('.next'),
+                }
+            })
+            swiper.on('started',() => {
+                document.querySelector('.prev').classList.add('started');
+            })
+            swiper.on('update',(index) => {
+                console.log(swiper.currentIndex)
+            })
+        },1)  
+    })
+    
 }
 export default Home;

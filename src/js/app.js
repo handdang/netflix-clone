@@ -21,6 +21,10 @@ function initRouter(){
         routes : Routes,
     })
 
+
+    router.on('update', () => {
+        console.log(11)
+    })
 }
 
 function initEvents(){
@@ -30,7 +34,7 @@ function initEvents(){
 function onRouterLinks(event){
     const target = event.target;
     let elems = document.querySelectorAll(".nav-links > ul li.active");
-    [].forEach.call(elems, function(el) {
+    ;[].forEach.call(elems, function(el) {
         el.classList.remove("active");
     });
 
