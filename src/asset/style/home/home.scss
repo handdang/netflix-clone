@@ -4,7 +4,8 @@
         max-height: 720px;
         overflow: hidden;
         @media (min-width:1080px) and (max-width:1680px){
-            maix-height : 820px;
+            // max-height : 820px;
+            max-height : 220px;
         }
         @media (min-width:1681px){
             maix-height : 920px;

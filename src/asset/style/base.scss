@@ -2,7 +2,6 @@
 *, *:after, *:before {box-sizing:border-box;}
 html{
     overflow-y: scroll;
-    height: 4000px;
 }
 body{
     min-width: 280px;
@@ -16,7 +15,6 @@ img{
     max-width: 100%;
     vertical-align: top;
     object-fit: cover;
-    pointer-events: none;
 }
 li{list-style:none;}
 a{cursor:pointer; background-color:transparent; text-decoration:none; color:inherit;}

@@ -67,7 +67,7 @@ class Swiper extends EventEmitter{
     _animation(translateX){
         return new Promise((resolve, reject) => {
             const elem = this.DOM.elem;
-            elem.style.transition = '.34s';
+            elem.style.transition = '.50s';
             elem.style.transform = `translateX(-${translateX}%)`;
 
             elem.addEventListener('transitionend',resolve, {once : true})
